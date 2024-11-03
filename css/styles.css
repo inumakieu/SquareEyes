@@ -1,0 +1,93 @@
+@import url("shared.css");
+
+/* main */
+
+.carousel {
+    display: grid;
+}
+
+.carouselWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.carouselInfo>h3 {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.carouselInfo>h1 {
+    margin-top: -18px;
+    font-size: 38px;
+}
+
+.carouselInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 80px;
+    max-width: 500px;
+    gap: 16px;
+}
+
+.carouselInfo>p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.buttonsRow {
+    display: flex;
+    gap: 12px;
+}
+
+.list {
+    padding: 20px 80px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 12px;
+}
+
+.listWrapper {
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
+
+.items {
+    display: flex;
+    gap: 12px;
+}
+
+.itemTitle {
+    font-size: 14px;
+    margin: 0px var(--corner-radius-poster);
+    opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+    .carouselInfo>p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        /* number of lines to show */
+        line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+    .carouselInfo,
+    .list {
+        padding: 12px 32px;
+    }
+
+    .listItem > .poster {
+        width: 80px;
+    }
+
+    .listItem > .itemTitle {
+        font-size: 10px;
+    }
+}

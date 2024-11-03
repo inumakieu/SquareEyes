@@ -1,0 +1,321 @@
+/*  A shared css file for things that exist across all pages
+    e.g.: Navbar, Footer */
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./scrollbar.css");
+
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+a {
+    color: var(--fg);
+    text-decoration: none;
+}
+
+html,
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: "Inter";
+}
+
+/* Navbar */
+
+nav {
+    position: fixed;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    padding: 12px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper:first-child>img {
+    margin-right: auto;
+}
+
+.wrapper:last-child>div {
+    margin-left: auto;
+}
+
+.navbarLogo {
+    width: 48px;
+}
+
+.navbarList,
+.navbarRight {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbarItem>a {
+    opacity: 0.7;
+    font-size: 16px;
+    transition: 0.3s all ease;
+}
+
+.navbarItem:hover > a {
+    opacity: 0.85;
+}
+
+.navbarItem.active>a {
+    opacity: 1.0;
+    font-weight: 500;
+}
+
+.cart {
+    text-decoration: none;
+    color: var(--fg);
+    font-size: 14px;
+    opacity: 0.7;
+    transition: 0.3s all ease;
+}
+
+.cartWrapper {
+    position: absolute;
+    top: 50px;
+    right: 220px;
+    background: var(--fg);
+    color: var(--bg);
+    border-radius: 12px;
+    font-size: 12px;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s all ease;
+}
+
+.cart:hover .cartWrapper {
+    padding: 12px;
+    width: 220px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+.cartWrapper > .item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.cartWrapper > .item > .cartImage {
+    width: 40px;
+    aspect-ratio: 2/3;
+    border-radius: 6px;
+}
+
+.cart:hover, .cart.active {
+    opacity: 1.0;
+}
+
+.cart::after {
+    content: "3";
+    position: relative;
+    top: -8px;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background-color: var(--accent);
+}
+
+.navbarRight>div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    margin-right: -8px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.logout {
+    font-size: 10px;
+    opacity: 0.7;
+}
+
+.pfp {
+    width: 44px;
+    border-radius: 22px;
+}
+
+/* Footer */
+
+.footerWrapper {
+    width: 100%;
+    height: 220px;
+    padding: 20px 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.footerRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerLogo {
+    opacity: 0.5;
+    margin-right: auto;
+}
+
+.footerLogo > img {
+    width: 120px;
+    object-fit: cover;
+}
+
+.footerRow > ul {
+    display: flex;
+    gap: 8px;
+    margin-right: auto;
+    margin-left: -122px;
+}
+
+.footerWrapper > p {
+    opacity: 0.7;
+    margin-top: 40px;
+}
+
+/* Button */
+
+button {
+    padding: 8px 20px;
+    border-radius: var(--corner-radius-button);
+    background: var(--fg);
+    color: var(--bg);
+    font-size: 12px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+button > svg {
+    width: 18px;
+    aspect-ratio: 1;
+    margin-left: -4px;
+}
+
+.addToCart {
+    border: 1px solid var(--fg);
+    background: var(--bg);
+    color: var(--fg);
+    transition: 0.3s all ease;
+}
+
+.addToCart > svg {
+    fill: var(--fg);
+    transition: 0.3s all ease;
+}
+
+.addToCart:hover > svg {
+    fill: var(--bg);
+}
+
+.addToCart:hover {
+    background: var(--fg);
+    color: var(--bg);
+}
+
+/* Banner */
+
+.banner {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.banner,
+.carouselWrapper {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.carouselWrapper, .detailsWrapper {
+    background: linear-gradient(0deg, var(--bg) 0%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(90deg, var(--bg) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Poster */
+
+.poster {
+    width: 140px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: var(--corner-radius-poster);
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 12px 32px;
+        padding-top: 40px;
+    }
+
+    .navbarList {
+        position: absolute;
+        right: 32px;
+        top: 90px;
+        border-radius: 8px;
+        flex-direction: column;
+        align-items: end;
+        background-color: var(--fg);
+        height: 0px;
+        overflow: hidden;
+        transition: 0.3s all ease;
+    }
+
+    nav:hover .navbarList {
+        height: fit-content;
+        padding: 12px;
+    }
+
+    .navbarRight>div {
+        display: none;
+    }
+
+    .navbarItem > a {
+        color: var(--bg);
+        opacity: 0.5;
+    }
+
+    .poster {
+        width: 120px;
+    }
+
+    .banner {
+        height: 50vh;
+    }
+
+    .footerWrapper {
+        padding: 12px 20px;
+    }
+
+    .footerRow {
+        flex-direction: column;
+    }
+
+    .footerRow > ul, .footerLogo {
+        margin: 0;
+    }
+}

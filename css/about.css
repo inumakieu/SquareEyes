@@ -1,0 +1,29 @@
+@import url(shared.css);
+
+.footerWrapper {
+    position: absolute;
+    bottom: 0;
+}
+
+main, h1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 220px;
+}
+
+h1 {
+    height: 30vh;
+}
+
+.description {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    main, h1 {
+        padding: 60px 32px;
+    }
+}

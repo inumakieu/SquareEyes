@@ -1,0 +1,10 @@
+/* Use this file to store your useful variables */
+/* This could be colors, fonts, or padding sizes! */
+
+:root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --accent: #6458ED;
+    --corner-radius-button: 8px;
+    --corner-radius-poster: 12px;
+}

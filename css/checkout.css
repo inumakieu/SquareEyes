@@ -1,0 +1,241 @@
+@import url("shared.css");
+
+.backButton {
+    position: absolute;
+    display: flex;
+    fill: var(--fg);
+    gap: 8px;
+    align-items: center;
+    left: 160px;
+    top: 80px;
+}
+
+.backButton > svg {
+    width: 12px;
+}
+
+main {
+    display: flex;
+}
+
+aside, .paymentInfo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.cartImage {
+    width: 80px;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cartTitle {
+    font-size: 18px;
+    font-weight: 500;
+    width: 240px;
+}
+
+.price {
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.subtotal, .processing, .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0px;
+    margin-left: 92px;
+}
+
+.processing {
+    opacity: 0.5;
+}
+
+.processingTitle {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.processingFee {
+    font-size: 14px;
+}
+
+.divider {
+    border-radius: 0.5px;
+    background: var(--fg);
+    opacity: 0.4;
+}
+
+.pushed {
+    margin-left: 92px;
+}
+
+.horizontal {
+    height: 1px;
+}
+
+.vertical {
+    width: 1px;
+    margin: 80px 0px;
+}
+
+.applePay {
+    background: var(--fg);
+    color: var(--bg);
+    display: flex;
+    fill: var(--bg);
+    padding: 6px 120px;
+    padding-bottom: 10px;
+    align-items: end;
+    gap: 2px;
+    border-radius: 6px;
+}
+
+.appleLogo {
+    width: 20px;
+}
+
+.appleTitle {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: -3px;
+}
+
+.cardInfoDivider {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.cardInfoDivider > div {
+    width: 120px;
+}
+
+.orUseCard {
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: normal;
+    width: fit-content;
+}
+
+.cardWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+    margin-bottom: 40px;
+}
+
+.cardInfoTitle {
+    padding-left: 12px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.cardInfo {
+    width: 400px;
+    height: fit-content;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.cardRow {
+    display: flex;
+    align-items: center;
+}
+
+.cardNumber {
+    padding: 12px;
+    opacity: 0.7;
+}
+
+.expiryDate, .cvc {
+    width: 200px;
+    padding: 12px;
+    opacity: 0.7;
+}
+
+.cardNumber, .cvc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cvc {
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.cvcIcon {
+    width: 24px;
+}
+
+.payButton {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 80px;
+}
+
+@media (max-width: 600px) {
+    .backButton {
+        position: absolute;
+        display: flex;
+        fill: var(--fg);
+        gap: 8px;
+        align-items: center;
+        left: 32px;
+        top: 80px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 12px 32px;
+    }
+
+    aside {
+        padding-top: 120px;
+    }
+
+    .paymentInfo {
+        margin-top: 40px;
+    }
+
+    aside, .paymentInfo {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .cartImage {
+        width: 60px;
+    }
+
+    .subtotal, .processing, .total {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0px;
+        margin-left: 72px;
+    }
+
+    .vertical {
+        display: none;
+    }
+}
